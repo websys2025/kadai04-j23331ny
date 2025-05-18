@@ -53,6 +53,10 @@
                         console.log("残りは" + this.stock + "個です。");
                         // 課題4-3. ここにコードを書く
                         // 在庫用のエレメントを抽出し、HTML内の個数を更新
+                        const stockElem = document.getElementById("stock" + this.id);
+                        if (stockElem) {
+                            stockElem.textContent = this.stock;
+                        }
                     } else console.log(this.name+"は商品の在庫がないため購入できません。");
                 }
             } // End of Item class
